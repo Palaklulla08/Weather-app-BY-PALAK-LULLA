@@ -4,8 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WEATHER APP by palak lulla</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    
+    <!-- HEADER OF THR PAGE -->
+    <header class="flex justify-evenly">
+        <h1 class="h-30px"> <B>WEATHER APP</B> </h1>
+        <select class="converter">
+            <option>°C</option>
+            <option>°F</option>
+        </select>
+
+        <input type="text" placeholder="Search for the city" class="search-input" id="cityInput"></input>
+        <button class="search-btn " >Search</button>
+        <button on click="useCurrentLocation()">Use current location</button>
+
+        <h3>Recent Searches</h3>
+        <select id="recentSearches" onchange="selectCity()">
+            <option value="">-- Select a city --</option>
+        </select>
+
+
+
+
+    </header>
+
+
 </body>
 </html>
