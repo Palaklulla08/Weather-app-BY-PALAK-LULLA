@@ -42,4 +42,12 @@ async function checkWeather(city) {
         weatherIcon.src = "/snow.png";
     }
    
-  
+   // ALERT AT MORE THAN 40 CELCIUS
+      const warn =data.main.temp
+
+    async function notification(warn) {
+        if(warn>40){
+        alert("The Temperature is above 40°C")
+    }}
+    notification(warn)
+}
