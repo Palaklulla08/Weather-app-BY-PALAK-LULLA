@@ -88,3 +88,25 @@ async function daysForecast(city) {
     const day3 =data1.list[18].weather[0].main;
     const day4 =data1.list[26].weather[0].main;
     const day5 =data1.list[34].weather[0].main
+
+    // DATA FOR DAY1
+    if (day1 == "Clouds") {
+        forcastIcon1.src = "/clouds.png";
+    }
+    else if (day1 == "Clear") {
+        forcastIcon1.src = "/clear.png"
+    }
+    else if (day1 == "Rain") {
+        forcastIcon1.src = "/rain.png";
+    }
+    else if (day1== "Drizzle") {
+       forcastIcon1.src = "/drizzle.png";
+    }
+    else if (day1 == "Mist") {
+        forcastIcon1.src = "/mist.png";
+    }
+    else if (day1 == "Snow") {
+        forcastIcon1.src = "/snow.png";
+    }
+    
+   
