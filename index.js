@@ -188,4 +188,32 @@ async function daysForecast(city) {
 
    
 }
+searchBtn.addEventListener("click", () => {
+    checkWeather(searchBox.value)
+    daysForecast(searchBox.value)
+    addCity()
+    
+}
+)
+// Function to add a new city to storage
+function addCity() {
+    let city = document.getElementById("cityInput").value.trim();
+    if (!city) return;
+
+    let cities = JSON.parse(localStorage.getItem("recentCities")) || [];
+
+    // Avoid duplicates
+    if (!cities.includes(city)) {
+        cities.unshift(city); // Add to start
+    }
+
+    // Keep only latest 5 searches
+    cities = cities.slice(0, 5);
+
+    // Save back to localStorage
+    localStorage.setItem("recentCities", JSON.stringify(cities));
+
+    loadCities();
+    document.getElementById("cityInput").value = "";
+}
    
