@@ -216,4 +216,15 @@ function addCity() {
     loadCities();
     document.getElementById("cityInput").value = "";
 }
+// When user selects a city from dropdown
+function selectCity() {
+    let dropdown = document.getElementById("recentSearches");
+    let selectedCity = dropdown.value;
+    if (selectedCity) {
+        document.getElementById("cityInput").value = selectedCity;
+    }
+}
+
+// Load saved cities when page loads
+window.onload = loadCities;
    
