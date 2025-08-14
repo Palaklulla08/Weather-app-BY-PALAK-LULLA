@@ -81,3 +81,10 @@ async function daysForecast(city) {
     document.querySelector('.temperature5').innerHTML = Math.round(data1.list[34].main.temp) + "°C";
     document.querySelector('.humid5').innerHTML = data1.list[34].main.humidity + "%";
     document.querySelector('.windair5').innerHTML = data1.list[34].wind.speed + "m/s";
+
+    // DAYS TO BE FORECASTED
+    const day1 =data1.list[2].weather[0].main;
+    const day2 =data1.list[10].weather[0].main;
+    const day3 =data1.list[18].weather[0].main;
+    const day4 =data1.list[26].weather[0].main;
+    const day5 =data1.list[34].weather[0].main
