@@ -127,4 +127,24 @@ async function daysForecast(city) {
     else if (day2 == "Snow") {
         forcastIcon2.src = "/snow.png";
     }
+    // DATA FOR DAY3
+    if (day3 == "Clouds") {
+        forcastIcon3.src = "/clouds.png";
+    }
+    else if (day3 == "Clear") {
+        forcastIcon3.src = "/clear.png"
+    }
+    else if (day3 == "Rain") {
+        forcastIcon3.src = "/rain.png";
+    }
+    else if (day3== "Drizzle") {
+       forcastIcon3.src = "/drizzle.png";
+    }
+    else if (day3 == "Mist") {
+        forcastIcon3.src = "/mist.png";
+    }
+    else if (day3 == "Snow") {
+        forcastIcon3.src = "/snow.png";
+    }
+
    
